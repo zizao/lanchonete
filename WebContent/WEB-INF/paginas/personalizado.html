@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lanchonete</title>
+	</head>
+	<body>
+		<h1>LANCHONETE</h1>
+		<br>
+		<form action="lancheInseridoPersonalizado" method="POST">
+			<table id="lanches">
+				<tr>
+					<th></th>
+					<th>Nome</th>
+					<th>Recheio</th>
+				</tr>
+				<tr>
+					<td><input type="radio" name="opcao" value="1" checked></td>
+					<td>X-Bacon</td>
+					<td>Bacon, hambúrguer de carne e queijo</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="opcao" value="2"></td>
+					<td>X-Burger</td>
+					<td>Hambúrguer de carne e queijo</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="opcao" value="3"></td>
+					<td>X-Egg</td>
+					<td>Ovo, hambúrguer de carne e queijo</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="opcao" value="4"></td>
+					<td>X-Egg Bacon</td>
+					<td>Ovo, bacon, hambúrguer de carne e queijo</td>
+				</tr>
+			</table>
+			<br>
+			<button type="submit">Pedir</button>
+		</form>
+	</body>
+</html>
