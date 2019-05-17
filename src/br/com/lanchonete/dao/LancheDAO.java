@@ -7,6 +7,14 @@ public class LancheDAO {
 	
 	private final static Map<Integer, Lanche> LANCHES = new HashMap<>();
 
+	public Collection<Lanche> retornaPedidos() {
+		return LANCHES.values();
+	}
+	
+	public void limparPedidos() {
+		LANCHES.clear();
+	}
+	
 	public void adiciona(Lanche lanche) {
 		geraIdEAdiciona(lanche);
 	}

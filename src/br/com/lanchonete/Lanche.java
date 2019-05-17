@@ -7,6 +7,7 @@ public class Lanche {
 	private int carne;
 	private int ovo;
 	private int queijo;
+	private double valor;
 	private String nome;
 	
 	public Lanche(String nome, int alface, int bacon, int carne, int ovo, int queijo) {
@@ -29,6 +30,11 @@ public class Lanche {
 		}
 		
 		return valor;
+	}
+	
+	public double getValor() {
+		this.valor = calculaValor();
+		return this.valor;
 	}
 	
 	public String getNome() {

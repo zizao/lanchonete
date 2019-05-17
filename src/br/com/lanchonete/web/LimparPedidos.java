@@ -9,12 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/lanchePersonalizado")
-public class LanchePersonalizado extends HttpServlet {
+import br.com.lanchonete.dao.LancheDAO;
+
+@WebServlet(value="/limparPedidos")
+public class LimparPedidos extends HttpServlet{
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("paginas/personalizado.html");
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		new LancheDAO().limparPedidos();
+		RequestDispatcher dispatcher = req.getRequestDispatcher("paginas/listapedidos.html");
 		dispatcher.forward(req, resp);
 	}
 }

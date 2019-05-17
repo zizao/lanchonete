@@ -23,9 +23,11 @@ public class NovoLanchePersonalizado extends HttpServlet {
 		int carne = Integer.parseInt(req.getParameter("carne"));
 		int ovo = Integer.parseInt(req.getParameter("ovo"));
 		int queijo = Integer.parseInt(req.getParameter("queijo"));
+		
 		Lanche lanche = new Lanche(nome, alface, bacon, carne, ovo, queijo);		
+		
 		new LancheDAO().adiciona(lanche);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/paginas/adicionado.html");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("paginas/adicionado.html");
 		dispatcher.forward(req, resp);
 	}
 }

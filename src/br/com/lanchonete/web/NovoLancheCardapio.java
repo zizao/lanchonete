@@ -38,7 +38,7 @@ public class NovoLancheCardapio extends HttpServlet {
 				break;
 		}
 				
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/paginas/adicionado.html");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("paginas/adicionado.html");
 		dispatcher.forward(req, resp);
 	}
 }

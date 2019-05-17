@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lanchonete</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-reboot.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/personalizado.js"></script>
+	</head>
+	<body>
+		<h1 class="text-center">LANCHONETE</h1>
+		<h3 class="text-center">Escolha seus ingredientes</h3>
+		<br>
+		<form id="pedido" action="lancheInseridoPersonalizado" method="POST">
+			<div class="d-flex justify-content-center">
+				Nome:<input type="text" name="nome" id="nome">
+			</div>
+			<br>
+			<table class="table table-striped mx-auto border border-dark" style="width: 1000px">
+				<tr>
+					<th>Quantidade</th>
+					<th>Ingrediente</th>
+					<th>Valor unitário</th>
+				</tr>
+				<tr>
+					<td><input type="number" name="alface" id="alface" min="0" value="0"></td>
+					<td>Alface</td>
+					<td>R$ 0,40</td>
+				</tr>
+				<tr>
+					<td><input type="number" name=bacon id="bacon" min="0" value="0"></td>
+					<td>Bacon</td>
+					<td>R$ 2,00</td>
+				</tr>
+				<tr>
+					<td><input type="number" name="carne" id="carne" min="0" value="0"></td>
+					<td>Hambúrguer de carne</td>
+					<td>R$ 3,00</td>
+				</tr>
+				<tr>
+					<td><input type="number" name="ovo" id="ovo" min="0" value="0"></td>
+					<td>Ovo</td>
+					<td>R$ 0,80</td>
+				</tr>
+				<tr>
+					<td><input type="number" name="queijo" id="queijo" min="0" value="0"></td>
+					<td>Queijo</td>
+					<td>R$ 1,50</td>
+				</tr>
+			</table>
+			<br>
+			<div class="d-flex justify-content-center">
+				<button id="pedir" type="button" class="btn btn-primary" style="width: 100px">Pedir</button>
+			</div>
+		</form>
+	</body>
+</html>
